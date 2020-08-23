@@ -45,16 +45,16 @@ in from a secure Bastion server
 
 ## Creating A VPC
 
-1) Click On services on the top of the AWS dashboard and find VPC
+#### 1) Click On services on the top of the AWS dashboard and find VPC
 
 ![](/images/Click-on-Services.png)
 
-2) Click on “Your VPC” on the left and then “Create VPC”
+#### 2) Click on “Your VPC” on the left and then “Create VPC”
 
 ![](/images/Your-VPCs.png)
 
 
-3) Give your VPC an relative name tag and add the IPv4 CIDR block for your VPC
+#### 3) Give your VPC an relative name tag and add the IPv4 CIDR block for your VPC
 
 - The /16 means that in order for something to share the same network as our VPC, the first two octets
 must match, ```124.11```
@@ -65,15 +65,15 @@ must match, ```124.11```
 
 ## Creating the Internet Gateway (igw)
 
-1) On the left sidebar click on internet gateway
+#### 1) On the left sidebar click on internet gateway
 
 ![](/images/Click-igw.png)
 
-2) Add a conventional name tag and then click on create internet gateway
+#### 2) Add a conventional name tag and then click on create internet gateway
 
 ![](/images/Name-igw.png)
 
-3) We will next click on actions and then attach VPC. We then attach our IGW to
+#### 3) We will next click on actions and then attach VPC. We then attach our IGW to
 the VPC we have previously made
 
 ![](/images/Attach-VPC.png)
@@ -83,12 +83,12 @@ the VPC we have previously made
 As previously stated, our software will be a two-tier architecture and thus we will
 have separate subnets for our app and DB
 
-1) Click on subnets located on the left sidebar and then click on create subnet
+#### 1) Click on subnets located on the left sidebar and then click on create subnet
 found on the top
 
 ![](/images/Click-on-subnets.png)
 
-2) Using the correct convention, we can now name our subnet, we then enter our VPC id so
+#### 2) Using the correct convention, we can now name our subnet, we then enter our VPC id so
 our subnet is created within it. We then must give our subnet it's own Ipv4 CIDR block
 
 - Note that the first two octets are the same as our VPC, ensuring it is within it's network.
@@ -98,7 +98,7 @@ later we can attack our EC2 to it
 
 ![](/images/Name-subnet.png)
 
-3) After clicking create, we will then create another subnet, this time being for our private
+#### 3) After clicking create, we will then create another subnet, this time being for our private
 
 - Note how this time the number in the third octet has been changed to 2
 
